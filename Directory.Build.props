@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(SolutionDir)SharedConfig.targets"/>
+
+    <!-- Set default properties for all projects (can be overridden per project) -->
+    <PropertyGroup>
+        <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+        <TestLibrary>false</TestLibrary>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <DefineConstants>TRACE;DEBUG</DefineConstants>
+        <OutputPath>$(USERPROFILE)\Documents\Klei\OxygenNotIncluded\mods\Dev\MPNI</OutputPath>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DefineConstants>TRACE;RELEASE</DefineConstants>
+        <OutputPath>$(USERPROFILE)\Documents\Klei\OxygenNotIncluded\mods\Dev\MPNI</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$([System.Text.RegularExpressions.Regex]::IsMatch($(MSBuildProjectName), '^MPNI.Core$'))">
+        <UnityModLibrary>true</UnityModLibrary>
+    </PropertyGroup>
+    <PropertyGroup Condition="$([System.Text.RegularExpressions.Regex]::IsMatch($(MSBuildProjectName), '^MPNI\..*$'))">
+        <MPNILibrary>true</MPNILibrary>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(MPNILibrary)' == 'true' ">
+        <OutputPath>$(USERPROFILE)\Documents\Klei\OxygenNotIncluded\mods\Dev\MPNI\bin</OutputPath>
+    </PropertyGroup>
+</Project>

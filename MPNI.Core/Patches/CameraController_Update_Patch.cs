@@ -1,12 +1,8 @@
 ﻿using Harmony;
-using MPNI.Patches.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using MPNI.Core.Patches.Abstract;
 using UnityEngine;
 
-namespace MPNI.Patches
+namespace MPNI.Core.Patches
 {
     internal class CameraController_Update_Patch : ONIPatch
     {

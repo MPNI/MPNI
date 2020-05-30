@@ -5,6 +5,16 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPNI", "MPNI\MPNI.csproj", "{AC76DC7B-DE43-4B02-91A7-43B92B26B44C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{B8129B7B-A094-4895-AFF3-A9D21C8A2B12}"
+ProjectSection(SolutionItems) = preProject
+	DevVars.targets.example = DevVars.targets.example
+	Directory.Build.targets = Directory.Build.targets
+	SharedConfig.targets = SharedConfig.targets
+	Directory.Build.props = Directory.Build.props
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPNI.Core", "MPNI.Core\MPNI.Core.csproj", "{9491A684-0845-4F90-9EBB-140C5472864E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,10 @@ Global
 		{AC76DC7B-DE43-4B02-91A7-43B92B26B44C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC76DC7B-DE43-4B02-91A7-43B92B26B44C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC76DC7B-DE43-4B02-91A7-43B92B26B44C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9491A684-0845-4F90-9EBB-140C5472864E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9491A684-0845-4F90-9EBB-140C5472864E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9491A684-0845-4F90-9EBB-140C5472864E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9491A684-0845-4F90-9EBB-140C5472864E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

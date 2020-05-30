@@ -1,11 +1,7 @@
-﻿using KMod;
+﻿using System;
 using Steamworks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace MPNI.Patches.Steam
+namespace MPNI.Core.Steam
 {
     public class SteamManager
     {
@@ -15,8 +11,6 @@ namespace MPNI.Patches.Steam
             {
                 throw new Exception("Steam not running!");
             }
-
-
         }
     }
 }

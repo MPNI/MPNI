@@ -47,7 +47,7 @@ namespace MPNI.Core.Patches.Abstract
         {
             if (targetMethod == null)
             {
-                throw new ArgumentNullException("targetMethod");
+                throw new ArgumentNullException(nameof(targetMethod));
             }
 
             HarmonyMethod harmonyPrefixMethod = prefixMethod != null ? GetHarmonyMethod(prefixMethod) : null;

@@ -11,14 +11,21 @@ namespace MPNI
             AppDomain.CurrentDomain.AssemblyResolve += CurrentDomainOnAssemblyResolve;
             AppDomain.CurrentDomain.ReflectionOnlyAssemblyResolve += CurrentDomainOnAssemblyResolve;
 
-            var assembly = Assembly.Load(new AssemblyName("MPNI.Core"));
-            assembly.GetType("MPNI.Core.Patcher")
-                .InvokeMember("Execute",
-                    BindingFlags.Public | BindingFlags.Static | BindingFlags.InvokeMethod,
-                    null,
-                    null,
-                    null);
-            Log("Loaded");
+            try
+            {
+                var assembly = Assembly.Load(new AssemblyName("MPNI.Core"));
+                assembly.GetType("MPNI.Core.Patcher")
+                    .InvokeMember("Execute",
+                        BindingFlags.Public | BindingFlags.Static | BindingFlags.InvokeMethod,
+                        null,
+                        null,
+                        null);
+            }
+            catch (Exception)
+            {
+                Log("Failed to initializes");
+                throw;
+            }
         }
 
         private static Assembly CurrentDomainOnAssemblyResolve(object sender, ResolveEventArgs args)

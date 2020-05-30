@@ -6,24 +6,24 @@
     <PropertyGroup>
         <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
         <TestLibrary>false</TestLibrary>
+        <ModInstallDir>$(USERPROFILE)\Documents\Klei\OxygenNotIncluded\mods\Dev\MPNI</ModInstallDir>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
         <DefineConstants>TRACE;DEBUG</DefineConstants>
-        <OutputPath>$(USERPROFILE)\Documents\Klei\OxygenNotIncluded\mods\Dev\MPNI</OutputPath>
+        <OutputPath>$(ModInstallDir)</OutputPath>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <DefineConstants>TRACE;RELEASE</DefineConstants>
-        <OutputPath>$(USERPROFILE)\Documents\Klei\OxygenNotIncluded\mods\Dev\MPNI</OutputPath>
+        <OutputPath>$(ModInstallDir)</OutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition="$([System.Text.RegularExpressions.Regex]::IsMatch($(MSBuildProjectName), '^MPNI.Core$'))">
         <UnityModLibrary>true</UnityModLibrary>
     </PropertyGroup>
     <PropertyGroup Condition="$([System.Text.RegularExpressions.Regex]::IsMatch($(MSBuildProjectName), '^MPNI\..*$'))">
-        <MPNILibrary>true</MPNILibrary>
+        <OutputPath>$(ModInstallDir)\bin</OutputPath>
     </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(MPNILibrary)' == 'true' ">
-        <OutputPath>$(USERPROFILE)\Documents\Klei\OxygenNotIncluded\mods\Dev\MPNI\bin</OutputPath>
+    <PropertyGroup Condition="$([System.Text.RegularExpressions.Regex]::IsMatch($(MSBuildProjectName), '^MPNI\.Plugin\..*$'))">
+        <OutputPath>$(ModInstallDir)\bin\plugins</OutputPath>
     </PropertyGroup>
 </Project>

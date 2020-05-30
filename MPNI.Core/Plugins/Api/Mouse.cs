@@ -5,11 +5,14 @@ namespace MPNI.Core.Plugins.Api
 {
     public static class Mouse
     {
-        public static event EventHandler<MouseMoveEventArgs> Moved;
+        /// <summary>
+        ///     Event that gives X and Y position of the current tile the cursor is on in the world.
+        /// </summary>
+        public static event EventHandler<MouseMoveEventArgs> WorldPositionChanged;
 
-        internal static void OnMoved(MouseMoveEventArgs e)
+        internal static void OnWorldPositionChanged(MouseMoveEventArgs e)
         {
-            Moved?.Invoke(null, e);
+            WorldPositionChanged?.Invoke(null, e);
         }
     }
 }

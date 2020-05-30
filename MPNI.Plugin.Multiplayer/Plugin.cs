@@ -8,7 +8,7 @@ namespace MPNI.Plugin.Multiplayer
     {
         public void Start()
         {
-            Mouse.Moved += (sender, args) =>
+            Mouse.WorldPositionChanged += (sender, args) =>
             {
                 Console.WriteLine($"Mouse moved: {args.X}, {args.Y}");
             };

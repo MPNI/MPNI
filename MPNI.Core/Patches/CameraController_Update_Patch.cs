@@ -20,7 +20,7 @@ namespace MPNI.Core.Patches
             var moveEvent = new MouseMoveEventArgs(cursorPos.x, cursorPos.y);
             if (lastMoveEvent != moveEvent)
             {
-                Mouse.OnMoved(moveEvent);
+                Mouse.OnWorldPositionChanged(moveEvent);
                 lastMoveEvent = moveEvent;
             }
         }

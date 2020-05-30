@@ -16,7 +16,7 @@ namespace MPNI.Core
 
         public static void PatchAll(HarmonyInstance instance)
         {
-            IEnumerable<Type> patches = Assembly.GetExecutingAssembly().GetTypes().Where(t => t.IsAssignableFrom(typeof(ONIPatch)) && !t.IsAbstract);
+            IEnumerable<Type> patches = Assembly.GetExecutingAssembly().GetTypes().Where(t => typeof(ONIPatch).IsAssignableFrom(t) && !t.IsAbstract);
 
             Console.WriteLine("[MPNI] Applying patches");
             foreach (Type type in patches)

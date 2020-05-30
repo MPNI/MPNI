@@ -64,6 +64,7 @@
     <Compile Include="Mod_OnLoad.cs" />
     <Compile Include="Patcher.cs" />
     <Compile Include="Patches\Abstract\ONIPatch.cs" />
+    <Compile Include="Patches\CameraController_Update_Patch.cs" />
     <Compile Include="Steam\SteamManager.cs" />
   </ItemGroup>
   <ItemGroup />

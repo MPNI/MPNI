@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using ONIMP.Patches.Abstract;
+using MPNI.Patches.Abstract;
 
-namespace ONIMP
+namespace MPNI
 {
     public static class Patcher
     {

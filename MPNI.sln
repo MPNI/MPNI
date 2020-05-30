@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ONIMP", "ONIMP\ONIMP.csproj", "{AC76DC7B-DE43-4B02-91A7-43B92B26B44C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPNI", "MPNI\MPNI.csproj", "{AC76DC7B-DE43-4B02-91A7-43B92B26B44C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

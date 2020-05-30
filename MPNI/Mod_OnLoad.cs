@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ONIMP
+namespace MPNI
 {
     public static class Mod_OnLoad
     {
         public static void OnLoad()
         {
-            Debug.Log("ONIMP Mod Loaded");
+            Debug.Log("MPNI Mod Loaded");
 
-            HarmonyInstance instance = HarmonyInstance.Create("ONIMP");
+            HarmonyInstance instance = HarmonyInstance.Create("MPNI");
 
             Patcher.PatchAll(instance);
         }

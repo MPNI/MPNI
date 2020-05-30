@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace ONIMP.Patches.Abstract
+namespace MPNI.Patches.Abstract
 {
     internal abstract class ONIPatch
     {

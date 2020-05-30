@@ -25,8 +25,4 @@
   <!-- Using DependsOnTarget with Conditional targets as an if else structure... -->
   <!-- Note that this is the first target, called by InitialTargets -->
   <Target Name="TestONIFolder" DependsOnTargets="MaybeCopyDevVars;DevVarsInvalid" Condition="!Exists($(ONIDir))" />
-
-  <PropertyGroup >
-    <OutputPath>$(SolutionDir)\bin\$(Configuration)\</OutputPath>
-  </PropertyGroup>
 </Project>
